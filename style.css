@@ -1,0 +1,286 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+.header {
+    background: #111;
+    color: #fefefe;
+    padding: 1rem 0;
+}
+
+.logo {
+    max-width: 60px; /* Atur lebar maksimum sesuai kebutuhan */
+    height: auto; /* Biarkan tinggi otomatis untuk menjaga proporsi */
+}
+
+.header .container {
+    display: flex;
+    align-items: center; /* Menyelaraskan logo dan judul secara vertikal */
+    padding: 0 2rem;
+}
+
+.header h1 {
+    margin-left: 20px; /* Menambahkan sedikit jarak antara logo dan judul */
+}
+
+nav {
+    margin-left: auto; /* Memindahkan navigasi ke sebelah kanan */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 1rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 1rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    background: url('bcg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-align: center;
+}
+
+.hero .btn {
+    background: #ff4500;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+/* Shop Section */
+.shop {
+    padding: 2rem;
+    text-align: center;
+}
+
+.products {
+    display: flex; /* Menggunakan Flexbox */
+    flex-wrap: wrap; /* Membungkus elemen jika tidak muat dalam satu baris */
+    justify-content: space-between; /* Menyebar elemen secara merata */
+    margin: 20px 0; /* Margin atas dan bawah */
+}
+
+.product {
+    flex: 1 1 calc(33.333% - 20px); /* Mengatur lebar produk */
+    margin: 10px; /* Margin antar produk */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek kedalaman */
+    padding: 15px; /* Padding dalam produk */
+    text-align: center; /* Menyelaraskan teks di tengah */
+    border-radius: 5px; /* Sudut membulat */
+    background-color: #fff; /* Warna latar belakang produk */
+}
+
+.product img {
+    max-width: 100%; /* Memastikan gambar tidak lebih besar dari kontainer */
+    height: auto; /* Menjaga proporsi gambar */
+}
+
+.btn {
+    background-color: #ff5722; /* Warna latar belakang */
+    color: white; /* Warna teks */
+    border: none; /* Menghilangkan border default */
+    padding: 10px 20px; /* Padding untuk tombol */
+    border-radius: 5px; /* Sudut membulat */
+    font-size: 16px; /* Ukuran font */
+    cursor: pointer; /* Menunjukkan bahwa ini adalah tombol yang dapat diklik */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transisi untuk efek hover */
+}
+
+.btn:hover {
+    background-color: #e64a19; /* Warna latar belakang saat hover */
+    transform: translateY(-2px); /* Efek angkat saat hover */
+}
+
+.btn:active {
+    transform: translateY(0); /* Kembali ke posisi semula saat ditekan */
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background: #111;
+    color: #fff;
+    margin-top: 2rem;
+}
+.about {
+    background: linear-gradient(to right, #111, #333); /* Gradien warna gelap */
+    color: #fff;
+    padding: 3rem 1.5rem;
+}
+
+.about .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #ff4500;
+}
+
+/* Grid untuk Deskripsi dan Info */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    width: 100%;
+}
+
+.about-description,
+.about-info {
+    background: rgba(255, 255, 255, 0.1); /* Transparansi */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Style Address */
+.address h3,
+.social-media h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #ff4500;
+}
+
+.address p {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* Style Ikon Sosial Media */
+.social-media .icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-media img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.social-media img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column; /* Mengubah arah flex menjadi kolom */
+        align-items: flex-start; /* Menyelaraskan item ke kiri */
+    }
+
+    .header h1 {
+        margin-left: 0; /* Menghapus margin kiri pada judul */
+        margin-top: 10px; /* Menambahkan margin atas */
+    }
+
+    .nav-links {
+        flex-direction: column; /* Mengubah arah navigasi menjadi kolom */
+        margin-left: 0; /* Menghapus margin kiri */
+        padding: 0; /* Menghapus padding */
+    }
+
+    .nav-links li {
+        margin: 0.5rem 0; /* Menambahkan margin vertikal antar item */
+    }
+
+    .hero {
+        height: 60vh; /* Mengurangi tinggi hero section */
+        padding: 1rem; /* Menambahkan padding */
+    }
+
+    .hero h2 {
+        font-size: 1.8rem; /* Mengurangi ukuran font untuk judul */
+    }
+
+    .hero p {
+        font-size: 1rem; /* Mengurangi ukuran font untuk deskripsi */
+    }
+
+    .products {
+        flex-direction: column; /* Mengubah arah produk menjadi kolom */
+        align-items: center; /* Menyelaraskan produk ke tengah */
+    }
+
+    .product {
+        flex: 1 1 100%; /* Mengatur lebar produk menjadi 100% */
+        margin: 10px 0; /* Menambahkan margin vertikal antar produk */
+    }
+
+    .about-content {
+        grid-template-columns: 1fr; /* Mengubah grid menjadi satu kolom */
+    }
+
+    .about-description,
+    .about-info {
+        padding: 1rem; /* Mengurangi padding */
+    }
+
+    .social-media img {
+        width: 30px; /* Mengurangi ukuran ikon sosial media */
+        height: 30px; /* Mengurangi ukuran ikon sosial media */
+    }
+}
